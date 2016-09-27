@@ -1,5 +1,9 @@
 import json
 import requests
-payload = json.dumps({'token': 'b4ee4ec5ebaf77cf5c7b43c03d5e39b1', 'GitHub': "https://github.com/irmacias/challenge"})
-r = requests.post('http://challenge.code2040.org/api/register', payload)
-print r.text
+def registration(token, github):
+    payload = json.dumps({'token': token, 'GitHub': github})
+    r = requests.post('http://challenge.code2040.org/api/register', payload)
+    return r.text, r.url
+token = "b4ee4ec5ebaf77cf5c7b43c03d5e39b1"
+github = "https://github.com/irmacias/CODE2040"
+registration(token, github)
