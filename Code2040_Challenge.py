@@ -86,7 +86,7 @@ def the_dating_game(token):
     new_r = requests.post('http://challenge.code2040.org/api/dating/validate', json=payload_2)
     return new_r.text
 # Took longer than it should have. The Z cutoff for timezones took me a while to figure out as python does
-# not implement it automatically, but it was cool to learn strfttime() to use custom formatting for the
+# not implement it automatically, but it was cool to learn strftime() to use custom formatting for the
 # iso8601 string.
 
 print (the_dating_game(token))
