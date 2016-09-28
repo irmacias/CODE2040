@@ -1,9 +1,0 @@
-import json
-import requests
-def registration(token, github):
-    payload = json.dumps({'token': token, 'github': github})
-    r = requests.post('http://challenge.code2040.org/api/register', payload)
-    return r
-token = "b4ee4ec5ebaf77cf5c7b43c03d5e39b1"
-github = "https://github.com/irmacias/CODE2040"
-print registration(token, github)
