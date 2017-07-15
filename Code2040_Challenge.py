@@ -16,9 +16,6 @@ def registration(token, github):
     r = requests.post('http://challenge.code2040.org/api/register', json=payload)
     return r.text
 
-# I really didn't know much abbout posting json requests but it will proved to be helpful knowledge
-# as when speaking with classmates, they advised me that it would definitely be worthwhile to learn
-# for future collaborative projects, which was quite nice.
 print (registration(token, github))
 
 
@@ -69,7 +66,7 @@ def prefix(token):
     new_r = requests.post('http://challenge.code2040.org/api/prefix/validate', json=payload_2)
     return new_r.text
 
-# Python documentation was helpful in learning the startswith method for strings
+
 print (prefix(token))
 
 
@@ -85,10 +82,7 @@ def the_dating_game(token):
     payload_2 = {"token": token, "datestamp": new_date}
     new_r = requests.post('http://challenge.code2040.org/api/dating/validate', json=payload_2)
     return new_r.text
-# Took longer than it should have. The Z cutoff for timezones took me a while to figure out as python does
-# not implement it automatically, but it was cool to learn strftime() to use custom formatting for the
-# iso8601 string.
+
 
 print (the_dating_game(token))
 
-# Thats it! Thanks and I hope to continue on in the application process!
